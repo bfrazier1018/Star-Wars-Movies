@@ -39,5 +39,11 @@ exports.movie_single = (req, res) => {
 
 // Not Found Routes
 exports.notFound = (req, res) => {
-	res.send("404 Page Not Found");
+
+	var movies = moviesJSON.movies;
+	
+	res.render('notFound', {
+		movies : movies, 
+		title : "This is Not the Page Your Are Looking For"
+	});
 };

@@ -22,7 +22,8 @@ app.get('/star_wars_episode/:episode_number?', routes.movie_single);
 // Not Found Routes
 app.get('*', routes.notFound);
 
-// ---------- Port ---------- 
-app.listen(3000, () => {
-	console.log("The application is running on localhost:3000");
-});
+// --------------- Port --------------- 
+
+// Development & Production Environment
+app.listen(process.env.PORT || 3000);
+
