@@ -7,7 +7,7 @@ exports.home = (req, res) => {
 
 	res.render('home', {
 		title : "Star Wars Movies",
-		movies : movies 
+		movies : movies,
 	});
 };
 
